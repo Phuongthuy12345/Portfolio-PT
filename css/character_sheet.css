@@ -1,44 +1,100 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Cover Image Section */
 .cover-image {
     height: 1000px;
     background-size: cover;
     background-position: center;
     margin-bottom: 40px;
+    border-radius: 10px; /* Thêm viền bo góc */
 }
 
+/* Year Card Section */
 .year-card {
-    height: 300px;
-    margin: 20px;
+    height: 100px; /* Chiều cao đồng nhất */
+    width: 100%; /* Đảm bảo đầy chiều rộng của col */
+    margin: 10px 5px; /* Giảm margin ngang để cards sát nhau hơn, nằm ngang */
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 48px;
+    font-size: 24px; /* Giảm font-size để phù hợp với kích thước mới */
     font-weight: bold;
     background-size: cover;
     color: rgb(236, 141, 190);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     background-color: rgb(236, 141, 190); /* Màu nền fallback nếu ảnh không load */
+    border-radius: 10px; /* Thêm viền bo góc */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Hiệu ứng mượt mà */
 }
 
 .year-card:hover {
     opacity: 0.8;
+    transform: scale(1.05); /* Thêm hiệu ứng zoom khi hover */
 }
 
+/* Content Section */
 .content-section {
     display: none;
     margin-top: 40px;
     padding: 40px;
     border: 1px solid #ccc;
     background-color: #f9f9f9;
+    border-radius: 10px; /* Bo góc cho section */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Thêm bóng để nổi bật */
 }
 
 .content-section.active {
     display: block;
 }
 
+.content-section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.content-section p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Image Styles */
 img {
     object-fit: cover; /* Đảm bảo ảnh fit khung */
     width: 100%; /* Đảm bảo ảnh đầy khung */
     height: auto; /* Giữ tỷ lệ ảnh */
     background-color: #f0f0f0; /* Màu nền fallback nếu ảnh không load */
+    border-radius: 10px; /* Bo góc cho ảnh */
+    transition: transform 0.3s ease; /* Hiệu ứng hover cho ảnh */
+}
+
+img:hover {
+    transform: scale(1.03); /* Zoom nhẹ khi hover ảnh */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cover-image {
+        height: 600px; /* Giảm chiều cao cover trên mobile */
+    }
+
+    .year-card {
+        height: 80px; /* Giảm thêm trên mobile */
+        font-size: 18px;
+        margin: 5px; /* Giảm margin trên mobile để wrap ngang */
+    }
+
+    .content-section {
+        padding: 20px; /* Giảm padding trên mobile */
+    }
+
+    .content-section h2 {
+        font-size: 24px;
+    }
 }
