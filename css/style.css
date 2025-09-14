@@ -1,0 +1,152 @@
+body {
+    padding-top: 56px;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+}
+
+.hero {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.hero .background-image {
+    position: absolute;
+    top: 0;`
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../images/hero-background.jpg') no-repeat center center;
+    background-size: cover;
+    z-index: 0;
+}
+
+.hero .content {
+    position: relative;
+    z-index: 1;
+    width: 50%;
+    padding: 20px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-family: "Cooper Black", sans-serif;
+}
+
+.hero .content h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 0.1rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.hero .content .btn {
+    font-size: 1.2rem;
+    padding: 10px 30px;
+}
+
+.project-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    box-sizing: border-box; /* Đảm bảo chiều rộng tính cả margin */
+    max-height: 350px; /* Giới hạn chiều cao tối đa của thẻ */
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.project-card .card-img-top {
+    height: 150px; /* Giảm chiều cao hình ảnh */
+    object-fit: cover; /* Đảm bảo hình ảnh không bị méo */
+    width: 100%;
+}
+
+.project-card .card-body {
+    padding: 10px; /* Giảm padding bên trong */
+    height: 180px; /* Giới hạn chiều cao phần nội dung */
+    overflow: hidden; /* Ẩn nội dung vượt quá */
+}
+
+.project-card .card-title {
+    font-size: 1rem; /* Giảm kích thước tiêu đề */
+    margin-bottom: 0.5rem;
+    white-space: nowrap; /* Ngăn tiêu đề xuống dòng */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Thêm dấu ... nếu quá dài */
+}
+
+.project-card .card-text {
+    font-size: 0.9rem; /* Giảm kích thước mô tả */
+    margin-bottom: 0.5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Hiển thị tối đa 2 dòng */
+    -webkit-box-orient: vertical;
+}
+
+.project-card .btn {
+    font-size: 0.8rem; /* Giảm kích thước nút */
+    padding: 5px 10px;
+}
+
+#projects {
+    position: relative;
+    padding: 20px 0;
+}
+
+#projects .project-container {
+    overflow-x: visible; /* Loại bỏ cuộn ngang */
+    width: 100%;
+}
+
+#projects .project-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Căn giữa các thẻ */
+    width: 100%;
+}
+
+.project-card {
+    flex: 0 0 calc(33.33% - 20px); /* Mỗi thẻ chiếm 1/3 chiều rộng, trừ khoảng cách */
+    max-width: calc(33.33% - 20px);
+    margin: 10px; /* Khoảng cách đều giữa các thẻ */
+}
+
+.project-center {
+    flex: 0 0 33.33%; /* Chiếm 1/3 chiều rộng để căn giữa */
+    max-width: 33.33%;
+    margin: 10px auto; /* Căn giữa hàng cuối */
+}
+
+#about img {
+    max-width: 100%;
+    height: auto;
+}
+
+#skills .card {
+    background: #f8f9fa;
+    border: none;
+    text-align: center;
+}
+
+#contact .list-group-item {
+    background: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+}
+
+#contact .list-group-item i {
+    margin-right: 10px;
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

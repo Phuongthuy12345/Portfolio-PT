@@ -1,0 +1,44 @@
+.cover-image {
+    height: 1000px;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 40px;
+}
+
+.year-card {
+    height: 300px;
+    margin: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    font-weight: bold;
+    background-size: cover;
+    color: rgb(236, 141, 190);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    background-color: rgb(236, 141, 190); /* Màu nền fallback nếu ảnh không load */
+}
+
+.year-card:hover {
+    opacity: 0.8;
+}
+
+.content-section {
+    display: none;
+    margin-top: 40px;
+    padding: 40px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+}
+
+.content-section.active {
+    display: block;
+}
+
+img {
+    object-fit: cover; /* Đảm bảo ảnh fit khung */
+    width: 100%; /* Đảm bảo ảnh đầy khung */
+    height: auto; /* Giữ tỷ lệ ảnh */
+    background-color: #f0f0f0; /* Màu nền fallback nếu ảnh không load */
+}
